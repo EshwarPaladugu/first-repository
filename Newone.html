@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <title>23R25A1203</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        form{
+            border-color: black;
+            border-top: solid ;
+            border-bottom: solid;
+            padding: 20px;
+            margin-top: 10px ;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+        header {
+            background-color: #00A8E1;
+            color: black;
+            padding: 1em;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color:black;
+            text-decoration: none;
+        }
+        .content-section {
+            display: none;
+            padding: 20px;
+        }
+        .content-section.active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #00A8E1;
+            color:black;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+const sections = document.querySelectorAll('.content-section');
+sections.forEach(section => {
+section.classList.remove('active');
+});
+const activeSection = document.getElementById(sectionId);
+activeSection.classList.add('active');
+}
+document.addEventListener('DOMContentLoaded', () => {
+showSection('home');
+});
+    </script>
+</head>
+
+
+<body >
+    <header>
+<h1>Welcome to My Web Page</h1>
+<nav>
+<ul>
+<li><a href="#home" onclick="showSection('home')">Home</a></li>
+<li><a href="#about" onclick="showSection('about')">About Us</a></li>
+<li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+</ul>
+</nav>
+</header>
+        <h1 align="center" >Prime Video</h1>
+        <marquee behaviour="scroll" bgcolor="lightgrey" direction="right" scrollamount="15">24/7 ADD FREE ENTERTAINMENT</marquee><br><br>
+        <form align="center" target="_self" action="https://www.primevideo.com/region/eu/offers/nonprimehomepage/ref=dv_web_force_root">
+            <input type="text" name="username" placeholder="Email or mobile number" required><br><br>
+            <input type="password" name="password" placeholder="Password" required><br><br>
+            <input type="submit" value="Join Prime" href=""><br><br>
+            <a href="https://www.primevideo.com/region/eu/offers/nonprimehomepage/ref=dv_web_force_root" class="signup-link">Create your Amazon account</a>
+        </form>
+        <div style="text-align: center;">
+        <img src="C:\Users\Eshwar\Downloads\Amazon_Prime_Video_logo.png" alt="prime logo" width="15%">
+        </div>
+
+        <main>
+            <section id="home" class="content-section active">
+            </section>
+            <section id="about" class="content-section">
+            <h2>About Us</h2>
+            <p>We are a team of passionate developers.</p>
+            </section>
+            <section id="contact" class="content-section">
+            <h2>Contact Us</h2>
+            <p>Email: info@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+            </section>
+            </main>
+            <footer>
+            <p>&copy; 2024 My Web Page</p>
+            </footer>
+       
+</body>
+</html>
